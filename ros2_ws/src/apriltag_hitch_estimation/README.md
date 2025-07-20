@@ -12,6 +12,6 @@ ros2 launch apriltag_hitch_estimation apriltag_hitch_estimation.launch.xml
 
 Instead, if you wish to estimate only the full 6DOF of the April tag array with respect to the RGB camera, comment out the last include, namely
 
-```bash
+```xml
 <include file="$(find-pkg-share apriltag_hitch_estimation)/launch/hitch_joint_estimation.launch.xml"/>
 ```
