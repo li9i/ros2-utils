@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>static_tf_republisher</name>
+  <version>0.0.1</version>
+  <description>Package to lookup static transforms and republish them at a steady rate</description>
+
+  <maintainer email="alefilot@auth.gr">li9i</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>geometry_msgs</depend>
+  <depend>yaml_cpp_vendor</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

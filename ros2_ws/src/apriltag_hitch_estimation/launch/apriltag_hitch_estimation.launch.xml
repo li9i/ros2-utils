@@ -1,0 +1,19 @@
+<launch>
+
+  <group>
+    <push-ros-namespace namespace="/outer_ns"/>
+
+    <group>
+      <push-ros-namespace namespace="inner_ns"/>
+      <group>
+        <push-ros-namespace namespace="apriltag_ros"/>
+        <include file="$(find-pkg-share apriltag_hitch_estimation)/launch/apriltag_ros.launch.xml"/>
+      </group> <!-- /outer_ns/inner_ns/apriltag_ros -->
+
+      <include file="$(find-pkg-share apriltag_hitch_estimation)/launch/apriltag_array_pose_estimation.launch.xml"/>
+    </group> <!-- /outer_ns/inner_ns -->
+
+    <include file="$(find-pkg-share apriltag_hitch_estimation)/launch/hitch_joint_estimation.launch.xml"/>
+
+  </group> <!-- /outer_ns -->
+</launch>

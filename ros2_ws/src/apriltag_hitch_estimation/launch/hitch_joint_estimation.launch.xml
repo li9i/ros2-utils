@@ -1,0 +1,10 @@
+<launch>
+
+  <node pkg="apriltag_hitch_estimation"
+    exec="hitch_joint_estimation_node"
+    name="hitch_joint_estimation_node"
+    output="screen">
+      <param from="$(find-pkg-share apriltag_hitch_estimation)/config/params.yaml"/>
+  </node>
+
+</launch>

@@ -1,0 +1,10 @@
+<launch>
+
+  <node pkg="apriltag_hitch_estimation"
+    exec="apriltag_array_pose_estimation_node"
+    name="apriltag_array_pose_estimation_node"
+    output="screen">
+      <param from="$(find-pkg-share apriltag_hitch_estimation)/config/params.yaml"/>
+  </node>
+
+</launch>

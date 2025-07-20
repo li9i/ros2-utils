@@ -1,0 +1,32 @@
+<launch>
+  <let name="pkg_name"                value="xyz_to_ply_transframer"/>
+  <arg name="namespace"               default="/"/>
+  <arg name="task_planner_notify_end" default="false"/>
+  <!-- ===================================================================== -->
+  <arg name="input_directory"         default="/home/humble/shared-inout/"/>
+  <arg name="output_directory"        default="/home/humble/shared-output/"/>
+  <arg name="input_file_prefix"       default="3D_Model_Filtered_Point_Cloud"/>
+  <let name="input_file_id"           value=""/> <!-- Leave blank -->
+  <arg name="input_file_pattern"      default="$(var input_file_prefix)_(\\d+)\\.xyz"/>
+  <arg name="output_name_pattern"     default="$(var input_file_prefix)_$1"/>
+  <arg name="source_frame"            default="map"/>
+  <arg name="target_frame"            default="robot_base_link"/>
+  <!-- ===================================================================== -->
+  <node pkg="$(var pkg_name)"
+       exec="$(var pkg_name)_interface_node"
+       name="$(var pkg_name)"
+       namespace="$(var namespace)"
+       output="screen"
+  >
+    <param name="task_planner_notify_end" value="$(var task_planner_notify_end)"/>
+    <param name="input_directory"         value="$(var input_directory)"/>
+    <param name="output_directory"        value="$(var output_directory)"/>
+    <param name="input_file_prefix"       value="$(var input_file_prefix)"/>
+    <param name="input_file_id"           value="$(var input_file_id)"/>
+    <param name="input_file_pattern"      value="$(var input_file_pattern)"/>
+    <param name="output_name_pattern"     value="$(var output_name_pattern)"/>
+    <param name="source_frame"            value="$(var source_frame)"/>
+    <param name="target_frame"            value="$(var target_frame)"/>
+  </node>
+  <!-- ===================================================================== -->
+</launch>

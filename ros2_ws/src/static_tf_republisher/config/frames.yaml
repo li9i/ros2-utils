@@ -1,0 +1,5 @@
+frames:
+  - parent: "robot_base_footprint"
+    child:  "robot_base_link"
+  - parent: "robot_base_link"
+    child:  "camera"
