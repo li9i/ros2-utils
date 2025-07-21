@@ -2,7 +2,7 @@
 
 - [`apriltag_hitch_estimation`](ros2_ws/src/apriltag_hitch_estimation/README.md) Need to estimate the 6DOF transform between a RGB camera and an object in real time? Or more specifically between a mobile base and a cart hitched to it? Print an arbitrary array of April tags, launch this node, and you are good to go
 
-- [`static_tf_republisher`](ros2_src/static_tf_republisher/README.md) ROS 1 cannot look up static transforms published from ROS 2 nodes. Use this package to republish select transforms from `/tf_static` to `/tf` so that ROS 1 nodes have access to them
+- [`static_tf_republisher`](ros2_ws/src/static_tf_republisher/README.md) ROS 1 cannot look up static transforms published from ROS 2 nodes. Use this package to republish select transforms from `/tf_static` to `/tf` so that ROS 1 nodes have access to them
 
 - [`ply_to_xyz_transframer`](ros2_ws/src/ply_to_xyz_transframer/README.md) Transform a `.ply` file expressed in one frame of reference to a `.xyz` file expressed in another
 
