@@ -1,6 +1,6 @@
 # `apriltag_hitch_estimation`
 
-Estimate the 6DOF transform between a RGB camera and an array of April tags, or that between a mobile base and a cart hitched to the base.
+Estimate the 6DOF transform between a RGB camera and an array of April tags. Use case: estimate the transform between a mobile base and a cart hitched to the base.
 
 Set your specific frames, topic, params, etc in `config/params.yaml`. Then inspect launchers in `launch/`.
 
