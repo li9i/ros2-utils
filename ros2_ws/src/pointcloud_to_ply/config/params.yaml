@@ -1,0 +1,63 @@
+#______________________________________________________________________________
+/pointcloud_to_ply_node:
+  ros__parameters:
+
+    # Topic to subscribe to
+    pointcloud_topic: "/rc_viscore/points2"
+
+    # --------------------------------------------------------------------------
+    # Save options
+    # --------------------------------------------------------------------------
+    # output_path will be created if missing
+    output_path: ""
+
+    # final file will be "mesh.obj" or "mesh.ply"
+    output_basename: "cropped"
+
+    # "obj" or "ply"
+    output_format: "obj"
+
+    # --------------------------------------------------------------------------
+    # Preprocessing
+    # --------------------------------------------------------------------------
+    # 0 disables downsampling
+    voxel_downsample_size: 0.0
+    remove_statistical_outliers: true
+    nso_nb_neighbors: 20
+    nso_std_ratio: 2.0
+
+    # --------------------------------------------------------------------------
+    # Normal estimation
+    # --------------------------------------------------------------------------
+    normal_radius: 0.05
+    normal_max_nn: 30
+
+    # --------------------------------------------------------------------------
+    # Reconstruction selection
+    # --------------------------------------------------------------------------
+    # "poisson" or "bpa"
+    reconstruction_method: "poisson"
+
+    # --------------------------------------------------------------------------
+    # Poisson params
+    # --------------------------------------------------------------------------
+    poisson_depth: 9
+
+    # remove lowest X fraction by density (0..1)
+    poisson_density_quantile: 0.05
+
+    # --------------------------------------------------------------------------
+    # Ball-Pivoting params
+    # --------------------------------------------------------------------------
+    # list of radii (meters)
+    bpa_radii: [0.02, 0.04, 0.08]
+
+    # degrees; 0..90 typical
+    bpa_triangle_angle: 30.0
+
+    # --------------------------------------------------------------------------
+    # Node behavior
+    # --------------------------------------------------------------------------
+    # shut down after first successful save
+    shutdown_after_save: true
+    log_level_debug: false
