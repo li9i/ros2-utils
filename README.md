@@ -2,7 +2,7 @@
 
 - [`apriltag_hitch_estimation`](ros2_ws/src/apriltag_hitch_estimation/README.md) Need to estimate the 6DOF transform between a RGB camera and an object in real time? Or more specifically between a mobile base and a cart hitched to it? Print an arbitrary array of April tags, launch this node, and you are good to go
 
-- [`apriltag_sync`](ros2_ws/src/apriltag_sync/README.md) Need to detect apriltags? `apriltag_ros` requires image and camera info input topics to be sufficiently synchronised but not all cameras provide this natively. This node synchronises these kinds of topics.
+- [`apriltag_sync`](ros2_ws/src/apriltag_sync/README.md) Need to detect apriltags? `apriltag_ros` requires image and camera info input topics to be sufficiently synchronised but not all cameras provide this natively. Launch this node to synchronise these topics.
 
 - [`pointcloud_to_ply`](ros2_ws/src/pointcloud_to_ply/README.md) Capture a point cloud from a topic and store it in `.ply` or `.obj` format
 
