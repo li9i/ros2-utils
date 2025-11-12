@@ -1,4 +1,4 @@
-### `ros2-utils`: A small collection of ROS 2 Humble utility packages
+### `ros2-utils`: A collection of ROS 2 Humble utility packages
 
 - [`apriltag_hitch_estimation`](ros2_ws/src/apriltag_hitch_estimation/README.md) Need to estimate the 6DOF transform between a RGB camera and an object in real time? Or more specifically between a mobile base and a cart hitched to it? Print an arbitrary array of April tags, launch this node, and you are good to go
 
